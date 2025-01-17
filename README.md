@@ -2,20 +2,16 @@
 
 This is a markdown version of the [mckays-app-template](https://github.com/mckaywrigley/mckays-app-template) repository, generated for use as a knowledge base in AI projects.
 
-## Original README
+## Directory Structure Documentation
 
-The original README.md from the repository:
-
-```markdown
-# Mckay's App Template
-
-This is a full-stack app template for courses on [Takeoff](https://JoinTakeoff.com/).
-
-## Sponsors
-
-If you are interested in sponsoring my repos, please contact me at [ads@takeoffai.org](mailto:ads@takeoffai.org).
-
-Or sponsor me directly on [GitHub Sponsors](https://github.com/sponsors/mckaywrigley).
+- [Actions](/docs/actions.md) - Server actions for data fetching and mutations
+- [App](/docs/app.md) - Next.js application code and routes
+- [Components](/docs/components.md) - React components using shadcn/ui
+- [Database](/docs/db.md) - Database schemas and queries using Drizzle ORM
+- [Hooks](/docs/hooks.md) - React hooks and custom hooks
+- [Library](/docs/lib.md) - Utility functions and helpers
+- [Prompts](/docs/prompts.md) - AI prompt templates and configurations
+- [Types](/docs/types.md) - TypeScript type definitions
 
 ## Tech Stack
 
@@ -29,9 +25,7 @@ Or sponsor me directly on [GitHub Sponsors](https://github.com/sponsors/mckaywri
 
 ## Prerequisites
 
-You will need accounts for the following services.
-
-They all have free plans that you can use to get started.
+You will need accounts for the following services:
 
 - Create a [Cursor](https://www.cursor.com/) account
 - Create a [GitHub](https://github.com/) account
@@ -41,57 +35,10 @@ They all have free plans that you can use to get started.
 - Create a [PostHog](https://posthog.com/) account
 - Create a [Vercel](https://vercel.com/) account
 
-You will likely not need paid plans unless you are building a business.
+## Environment Setup
 
-## Environment Variables
+Required environment variables:
 
-```bash
-# DB (Supabase)
-DATABASE_URL=
-
-# Auth (Clerk)
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/login
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/signup
-
-# Payments (Stripe)
-STRIPE_SECRET_KEY=
-STRIPE_WEBHOOK_SECRET=
-NEXT_PUBLIC_STRIPE_PORTAL_LINK=
-NEXT_PUBLIC_STRIPE_PAYMENT_LINK_YEARLY=
-NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY=
-
-# Analytics (PostHog)
-NEXT_PUBLIC_POSTHOG_KEY=
-NEXT_PUBLIC_POSTHOG_HOST=
-```
-
-## Setup
-
-1. Clone the repository
-2. Copy `.env.example` to `.env.local` and fill in the environment variables from above
-3. Run `npm install` to install dependencies
-4. Run `npm run dev` to run the app locally
-```
-
-## Repository Structure
-
-The main directories in the repository are:
-
-- `/actions` - Server actions for data fetching and mutations
-- `/app` - Next.js application code and routes
-- `/components` - React components using shadcn/ui 
-- `/db` - Database schemas and queries using Drizzle ORM
-- `/hooks` - React hooks and custom hooks
-- `/lib` - Utility functions and helpers
-- `/prompts` - AI prompt templates and configurations
-- `/public` - Static assets
-- `/types` - TypeScript type definitions
-
-## Environment Configuration
-
-### Environment Variables (.env.example)
 ```env
 # DB
 DATABASE_URL=
@@ -113,3 +60,49 @@ NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY=
 NEXT_PUBLIC_POSTHOG_KEY=
 NEXT_PUBLIC_POSTHOG_HOST=
 ```
+
+## Getting Started
+
+1. Clone the repository
+2. Copy `.env.example` to `.env.local` and fill in the environment variables
+3. Install dependencies with `npm install`
+4. Start the development server with `npm run dev`
+
+## Key Features
+
+1. **Authentication**
+   - User authentication via Clerk
+   - Protected routes
+   - User profiles
+
+2. **Database**
+   - PostgreSQL database hosted on Supabase
+   - Type-safe queries with Drizzle ORM
+   - Automatic migrations
+
+3. **UI Components**
+   - Shadcn UI components
+   - Responsive design with Tailwind
+   - Animations with Framer Motion
+
+4. **Payments**
+   - Stripe integration
+   - Subscription management
+   - Payment processing
+
+5. **Analytics**
+   - PostHog tracking
+   - User behavior analysis
+   - Conversion tracking
+
+## Additional Resources
+
+For more detailed information about specific aspects of the template, visit:
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind Documentation](https://tailwindcss.com/docs)
+- [Shadcn UI Documentation](https://ui.shadcn.com/docs)
+- [Drizzle ORM Documentation](https://orm.drizzle.team/docs/overview)
+- [Clerk Documentation](https://clerk.com/docs)
+- [Stripe Documentation](https://stripe.com/docs)
+- [PostHog Documentation](https://posthog.com/docs)
